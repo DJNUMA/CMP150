@@ -1,0 +1,10 @@
+C:\Users\media\Desktop\CMP150\Temp\bin\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\media\Desktop\CMP150\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb
+C:\Users\media\Desktop\CMP150\Temp\bin\Debug\UnityEditor.dll
+C:\Users\media\Desktop\CMP150\Temp\bin\Debug\UnityEngine.dll
+C:\Users\media\Desktop\CMP150\Temp\bin\Debug\Mono.Cecil.dll
+C:\Users\media\Desktop\CMP150\Temp\bin\Debug\nunit.framework.dll
+C:\Users\media\Desktop\CMP150\Temp\bin\Debug\ICSharpCode.NRefactory.dll
+C:\Users\media\Desktop\CMP150\obj\Debug\Assembly-CSharp-firstpass-vs.csprojResolveAssemblyReference.cache
+C:\Users\media\Desktop\CMP150\obj\Debug\Assembly-CSharp-firstpass.dll
+C:\Users\media\Desktop\CMP150\obj\Debug\Assembly-CSharp-firstpass.pdb
