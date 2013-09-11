@@ -2,52 +2,84 @@ using UnityEngine;
 using System.Collections;
 using System;
 
-
 [Serializable]
-public class CharacterControls : MonoBehaviour
+public class CharacterControls
 {
-    public KeyCode MoveForward = KeyCode.W;
-    public KeyCode MoveBack = KeyCode.S;
-    public KeyCode MoveLeft = KeyCode.A;
-    public KeyCode MoveRight = KeyCode.D;
+    public Control moveForward;
+    public Control moveBackward;
+    public Control moveLeft;
+    public Control moveRight;
+    //public Control jump;
 }
 
-public class CharacterMovement : MonoBehaviour
+public class myDerivedMono : MonoBehaviour
 {
+    public float XPos
+    {
+        get { return transform.position.x; }
+        set
+        {
+            Vector3 myPos = transform.position;
+            myPos.x = value;
+            transform.position = myPos;
+        }
+    }
+
+    public float YPos
+    {
+        get { return transform.position.y; }
+        set
+        {
+            Vector3 myPos = transform.position;
+            myPos.y = value;
+            transform.position = myPos;
+        }
+    }
+}
+
+public class CharacterMovement : myDerivedMono
+{
+    public float moveSpeed = 5f;
     public CharacterControls controls = new CharacterControls();
-    
-    public float MoveSpeed = 5f;
-    
+
     private float trueSpeed
     {
-        get { return MoveSpeed * Time.deltaTime; }
+        get { return moveSpeed * Time.deltaTime; }
     }
-	// Use this for initialization
-	void Start () 
+    // Use this for initialization
+    void Start()
     {
 
-	}
-	
-	// Update is called once per frame
-	void Update () 
+    }
+
+    // Update is called once per frame
+    void Update()
     {
-   
-        if (Input.GetKey(MoveForward))
+        //XPos = 0f;
+
+        if (controls.moveForward.IsActive)
         {
             transform.Translate(transform.forward * trueSpeed);
         }
-        if (Input.GetKey(MoveBack))
+
+        if (controls.moveBackward.IsActive)
         {
             transform.Translate(transform.forward * -1 * trueSpeed);
         }
-	    if (Input.GetKey(MoveRight)
-        {
-            transform.Translate(transform.right * trueSpeed);
-        }
-        if (Input.GetKey(MoveLeft)
+
+        if (controls.moveLeft.IsActive)
         {
             transform.Translate(transform.right * -1 * trueSpeed);
         }
 
+        if (controls.moveRight.IsActive)
+        {
+            transform.Translate(transform.right * trueSpeed);
+        }
+
+        //if (controls.jump.IsActive)
+        //{
+          //  transform.Translate(transform.up * trueSpeed);
+        //}
     }
 }
