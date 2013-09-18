@@ -37,11 +37,23 @@ public class Control : MonoBehaviour
     void Update ()
     {
         isActive = false;
+        deactivated = false;
+        activated = false;
         foreach (var input in inputs)
         {
             if(input.IsActive)
             {
                 isActive = true;
+                break;
+            }
+            if (input.Activated)
+            {
+                activated = true;
+                break;
+            }
+            if (input.Deactivated)
+            {
+                deactivated = true;
                 break;
             }
         }

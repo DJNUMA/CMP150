@@ -8,5 +8,7 @@ public class KeyboardInput : ControllerInput
     void Update()
     {
         isActive = Input.GetKey(activationKey);
+        activated = Input.GetKeyDown(activationKey);
+        deactivated = Input.GetKeyUp(activationKey);
     }
 }

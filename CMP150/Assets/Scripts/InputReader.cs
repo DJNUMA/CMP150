@@ -15,15 +15,15 @@ public class InputReader : MonoBehaviour
 
         if (ControlInput.IsActive)
         {
-            Debug.Log("Ya Done Fucked Up.");
+            Debug.Log("Ya Done Goofed Up.");
         }
         if (ControlInput.Activated)
         {
-            Debug.Log("Tis Off Good Sir.");
+            Debug.Log("Tis On Good Sir.");
         }
         if (ControlInput.Deactivated)
         {
-            Debug.Log("Tis On Good Sir.");
+            Debug.Log("Tis Off Good Sir.");
         }
 	}
 }
